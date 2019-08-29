@@ -11,3 +11,12 @@ INSERT INTO ads(user_id, title, description)
 VALUES (1, 'New Car', 'Brand new Honda, no miles'),
        (2, 'Orangutan', 'Newly captured Orangutan with gluten allergies. Please be nice.'),
        (3, 'Grandmothers Wheelchair', 'Old style Victorian hand crafted wheelchair. Slightly used.');
+
+INSERT INTO categories(title)
+VALUES ('Electronics'),
+       ('Appliances'),
+       ('Furniture'),
+       ('Vehicles'),
+       ('Jewelry'),
+       ('Entertainment'),
+       ('Tools')
