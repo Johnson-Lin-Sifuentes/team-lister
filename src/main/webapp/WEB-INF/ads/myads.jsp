@@ -17,11 +17,19 @@
         <ul>
 
             <c:forEach items="${userads}" var="ad">
-                <li>${ad.title} - ${ad.description} </li>
+                <li>${ad.title} - ${ad.description}</li>
+                <div>
+                    <form action="/myads" method="post">
+                        <button type="submit" value="${ad.id}" name="delete">Delete</button>
+                    </form>
+                </div>
+
+
 
             </c:forEach>
         </ul>
     </div>
+
 
 </body>
 </html>
