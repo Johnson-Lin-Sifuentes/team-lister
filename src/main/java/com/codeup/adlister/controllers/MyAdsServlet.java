@@ -32,15 +32,9 @@ public class MyAdsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        User user = (User) req.getSession().getAttribute("user");
         int id = Integer.parseInt(req.getParameter("delete"));
-//        if (id != null){
-//            System.out.println(user.getId());
+
             DaoFactory.getAdsDao().deleteAdsWithId(id);
-//            List<Ad> userDelete = DaoFactory.getAdsDao().deleteAdsWithId();
-//            req.setAttribute("userDelete",userDelete );
-//        }
-//        req.getRequestDispatcher("/WEB-INF/ads/myads.jsp").forward(req, resp);
         resp.sendRedirect("/myads");
     }
 }
