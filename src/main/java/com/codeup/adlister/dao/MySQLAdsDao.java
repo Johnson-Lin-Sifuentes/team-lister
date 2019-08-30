@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.io.FileInputStream;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
-    private Connection connection = null;
+    private Connection connection;
 
     public MySQLAdsDao(Config config) {
         try {
@@ -24,6 +25,23 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
         }
+    }
+
+
+    @Override
+    public Ad findAdWithId(Long id) {
+        String query = "SELECT * FROM ads WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1,id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("this is an error!");
+        }
+
     }
 
     @Override
@@ -42,7 +60,7 @@ public class MySQLAdsDao implements Ads {
         PreparedStatement stmt = null;
 
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = id");
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = " + id);
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
