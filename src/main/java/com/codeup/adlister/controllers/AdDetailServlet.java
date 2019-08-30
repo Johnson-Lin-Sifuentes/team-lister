@@ -14,11 +14,13 @@ public class AdDetailServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String user = request.getParameter("username");
-        String adId = request.getParameter("id");
-        Long id = Long.parseLong(adId);
+
+        String stringId = request.getParameter("id");
+        Long id = Long.parseLong(stringId);
+        request.setAttribute("username", DaoFactory.getUsersDao().findAdWithUsername(id));
         request.setAttribute("ad", DaoFactory.getAdsDao().findAdWithId(id));
         request.getRequestDispatcher("/WEB-INF/ads/adDetails.jsp").forward(request, response);
 
     }
+
 }

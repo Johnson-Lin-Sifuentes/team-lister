@@ -21,11 +21,11 @@ public class MyAdsServlet extends HttpServlet {
             User user = (User) req.getSession().getAttribute("user");
             if (user != null){
 
-                System.out.println(user.getId());
               List<Ad> userAds = DaoFactory.getAdsDao().findUserAds(user.getId());
               req.setAttribute("userads",userAds);
                 System.out.println("it's working");
             }
+
         req.getRequestDispatcher("/WEB-INF/ads/myads.jsp").forward(req, resp);
 
     }
