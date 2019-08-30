@@ -14,6 +14,7 @@
 <body>
 <h1>Ad Details</h1>
 <p><c:out value="${ad.title}"/></p>
-<a href=""><c:out value="made by ${username}"/></a>
+<p><c:out value="${username.username}"/></p>
+<a href=""><c:out value="made by ${username.email}"/></a>
 </body>
 </html>
