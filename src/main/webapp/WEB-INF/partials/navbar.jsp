@@ -13,8 +13,8 @@
                 <c:choose>
                     <c:when test="${sessionScope.user != null}">
                         <li><a href="/index.jsp">Home</a></li>
-                        <li><a href="/myads.jsp">My Ads</a></li>
-                        <li><a href="/create.jsp">Create Ad</a></li>
+                        <li><a href="/myads">My Ads</a></li>
+                        <li><a href="/create">Create Ad</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </c:when>
                     <c:when test="${sessionScope.user == null}">
