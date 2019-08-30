@@ -10,15 +10,22 @@
 
         <nav>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/index.jsp">Home</a></li>
-                <li><a href="/login">Login</a></li>
-                <c:if test="${sessionScope.user != null}">
-                    <li><a href="/myads.jsp">My Ads</a></li>
-                    <li><a href="/create.jsp">Create Ad</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                </c:if>
+                <c:choose>
+                    <c:when test="${sessionScope.user != null}">
+                        <li><a href="/index.jsp">Home</a></li>
+                        <li><a href="/myads">My Ads</a></li>
+                        <li><a href="/create">Create Ad</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </c:when>
+                    <c:when test="${sessionScope.user == null}">
+                        <li><a href="/index.jsp">Home</a></li>
+                        <li><a href="/login">Login</a></li>
+                    </c:when>
+                </c:choose>
             </ul>
         </nav>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+

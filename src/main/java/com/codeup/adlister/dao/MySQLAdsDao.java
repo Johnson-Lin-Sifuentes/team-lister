@@ -58,9 +58,12 @@ public class MySQLAdsDao implements Ads {
 
     public List<Ad> findUserAds(Long id) {
         PreparedStatement stmt = null;
-
         try {
+
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = " + id);
+
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id =" + id);
+
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
