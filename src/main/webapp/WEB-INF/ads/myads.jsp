@@ -17,8 +17,8 @@
         <ul>
 
             <c:forEach items="${userads}" var="ad">
-                <li>${ad.title}</li>
-                <li>${ad.description}</li>
+                <li>${ad.title} - ${ad.description} </li>
+
             </c:forEach>
         </ul>
     </div>
