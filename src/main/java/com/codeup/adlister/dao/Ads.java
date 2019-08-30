@@ -9,6 +9,6 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
-
+    Ad findAdWithId(Long id);
     List<Ad> findUserAds (Long id);
 }

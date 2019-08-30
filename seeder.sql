@@ -20,3 +20,4 @@ VALUES ('Electronics'),
        ('Jewelry'),
        ('Entertainment'),
        ('Tools')
+
