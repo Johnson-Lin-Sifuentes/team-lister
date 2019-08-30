@@ -9,9 +9,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+<jsp:include page="/WEB-INF/partials/head.jsp"/>
     <title>Title</title>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <h2>Here are your current ads</h2>
     <div>
         <ul>
