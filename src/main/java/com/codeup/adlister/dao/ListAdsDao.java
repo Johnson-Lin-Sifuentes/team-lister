@@ -32,6 +32,7 @@ public class ListAdsDao implements Ads {
         return null;
     }
 
+
     @Override
     public List<Ad> findUserAds(Long id) {
         return null;

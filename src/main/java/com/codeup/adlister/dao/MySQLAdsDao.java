@@ -26,8 +26,6 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error connecting to the database!", e);
         }
     }
-
-
     @Override
     public Ad findAdWithId(Long id) {
         String query = "SELECT * FROM ads WHERE id = ?";
@@ -46,7 +44,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public List<Ad> all() {
-        PreparedStatement stmt = null;
+        PreparedStatement stmt;
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads");
             ResultSet rs = stmt.executeQuery();
@@ -57,13 +55,9 @@ public class MySQLAdsDao implements Ads {
     }
 
     public List<Ad> findUserAds(Long id) {
-        PreparedStatement stmt = null;
+        PreparedStatement stmt;
         try {
-
-            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = " + id);
-
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id =" + id);
-
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
