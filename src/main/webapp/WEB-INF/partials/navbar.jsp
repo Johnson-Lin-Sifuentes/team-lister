@@ -19,7 +19,7 @@
                     </c:when>
                     <c:when test="${sessionScope.user == null}">
                         <li><a href="/index.jsp">Home</a></li>
-                        <li><a href="/register">Register Account</a></li>
+                        <li><a href="/register">Register User</a></li>
                         <li><a href="/login">Login</a></li>
                     </c:when>
                 </c:choose>
