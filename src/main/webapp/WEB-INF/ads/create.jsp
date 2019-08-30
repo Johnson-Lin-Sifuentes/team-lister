@@ -20,13 +20,13 @@
             <div class="form-group">
                 <label for="title">Category</label>
                     <div>
-                        <input type="checkbox" value=""> &nbsp;Electronics&nbsp;&nbsp;
-                        <input type="checkbox" value=""> &nbsp;Appliances&nbsp;&nbsp;
-                        <input type="checkbox" value=""> &nbsp;Furniture&nbsp;&nbsp;
-                        <input type="checkbox" value=""> &nbsp;Vehicles&nbsp;&nbsp;
-                        <input type="checkbox" value=""> &nbsp;Jewelry&nbsp;&nbsp;
-                        <input type="checkbox" value=""> &nbsp;Entertainment&nbsp;&nbsp;
-                        <input type="checkbox" value=""> &nbsp;Tools&nbsp;&nbsp;
+                        <input type="checkbox" value="1"> &nbsp;Electronics&nbsp;&nbsp;
+                        <input type="checkbox" value="2"> &nbsp;Appliances&nbsp;&nbsp;
+                        <input type="checkbox" value="3"> &nbsp;Furniture&nbsp;&nbsp;
+                        <input type="checkbox" value="4"> &nbsp;Vehicles&nbsp;&nbsp;
+                        <input type="checkbox" value="5"> &nbsp;Jewelry&nbsp;&nbsp;
+                        <input type="checkbox" value="6"> &nbsp;Entertainment&nbsp;&nbsp;
+                        <input type="checkbox" value="7"> &nbsp;Tools&nbsp;&nbsp;
                     </div>
 
             </div>
