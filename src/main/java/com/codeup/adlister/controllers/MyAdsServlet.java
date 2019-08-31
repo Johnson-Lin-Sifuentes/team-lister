@@ -34,6 +34,7 @@ public class MyAdsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("delete"));
 
+        System.out.println(id);
             DaoFactory.getAdsDao().deleteAdsWithId(id);
         resp.sendRedirect("/myads");
     }
