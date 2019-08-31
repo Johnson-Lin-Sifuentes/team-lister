@@ -22,7 +22,7 @@
                 <li>${ad.title} - ${ad.description}</li>
                 <div>
                     <form action="/myads" method="post">
-                        <button type="submit" value="${ad.id}" name="delete">Delete</button>
+                        <button type="submit" value="${ad.id}" name="delete" >Delete</button>
                     </form>
                 </div>
 

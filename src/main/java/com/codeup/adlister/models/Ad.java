@@ -5,19 +5,36 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
+    private long categs;
 
-    public Ad(long id, long aLong, String title, String description) {
-        this.id = this.id;
+    public Ad(long userId, String title, String description, long categs) {
         this.userId = userId;
         this.title = title;
         this.description = description;
+        this.categs = categs;
     }
 
-    public Ad(long userId, String parameter, String title) {
+    public Ad(long id, long userId, String title, String description,long categs) {
+        this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
+        this.categs = categs;
     }
+
+    public Ad(long userId, String requestParameter, String parameter, String title) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.categs = categs;
+    }
+
+//    public Ad(long id, String title, String description, long categs) {
+//        this.id = id;
+//        this.title = title;
+//        this.description = description;
+//        this.categs = categs;
+//    }
 
     public long getId() {
         return id;
@@ -49,5 +66,12 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public long getCategs(){
+        return categs;
+    }
+    public void setCategs(long userId){
+        this.categs = categs;
     }
 }
