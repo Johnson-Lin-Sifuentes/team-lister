@@ -18,4 +18,4 @@ VALUES (1, 'New Car', 'Brand new Honda, no miles,',4),
        (2, 'Orangutan', 'Newly captured Orangutan with gluten allergies. Please be nice.',6),
        (2, 'Grandmothers Wheelchair', 'Old style Victorian hand crafted wheelchair. Slightly used.',3);
 
-
+select * from
