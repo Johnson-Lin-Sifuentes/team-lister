@@ -17,21 +17,16 @@
     <h2>Here are your current ads</h2>
     <div>
         <ul>
-
             <c:forEach items="${userads}" var="ad">
                 <li>${ad.title} - ${ad.description}</li>
                 <div>
                     <form action="/myads" method="post">
-                        <button type="submit" value="${ad.id}" name="delete" >Delete</button>
+                        <button type="submit" value="${ad.id}" name="delete">Delete</button>
+                        <button type="submit" value="${ad.id}" name="edit">Edit</button>
                     </form>
                 </div>
-
-
-
             </c:forEach>
         </ul>
     </div>
-
-
 </body>
 </html>

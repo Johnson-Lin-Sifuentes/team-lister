@@ -17,15 +17,8 @@
         <ul>
             <c:choose>
                 <c:when test="${}"/>
-
-
             </c:choose>
         </ul>
-
-
-
-
     </div>
-
 </body>
 </html>
