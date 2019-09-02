@@ -14,6 +14,11 @@ CREATE TABLE users (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE categories (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL
+);
+
 CREATE TABLE ads (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
@@ -24,13 +29,6 @@ CREATE TABLE ads (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN key (categ_id) REFERENCES categories (id)
         ON DELETE CASCADE
-
-);
-
-CREATE TABLE categories (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(100) NOT NULL
-
 );
 
 CREATE TABLE categs_ads (
