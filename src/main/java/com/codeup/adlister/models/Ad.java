@@ -14,7 +14,7 @@ public class Ad {
         this.categs = categs;
     }
 
-    public Ad(long id, long userId, String title, String description,long categs) {
+    public Ad(long id, long userId, String title, String description, long categs) {
         this.id = id;
         this.userId = userId;
         this.title = title;
