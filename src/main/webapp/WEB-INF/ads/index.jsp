@@ -20,7 +20,25 @@
         </div>
     </c:forEach>
 </div>
-
-
 </body>
+<script src=“https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js“></script>
+<script>
+    function searchAds() {
+        var input, filter;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        var filteredAds = [];
+        var html = '';
+        <c:forEach var="ad" items="${ads}">
+        td = "${ad.title}";
+        if (td.toUpperCase().indexOf(filter) > -1){
+            filteredAds.push("${ad.title}");
+            html += "<div class='col-md-6'><h2><a href='http://localhost:8080/individualad?id=${ad.id}'>${ad.title}</a></h2><p>${ad.description}</p></div>";
+        }
+        </c:forEach>
+        $('.adList').html(html);
+    }
+    var searchBar = document.querySelector('#search');
+    $('#search').on( "click", searchAds());
+</script>
 </html>

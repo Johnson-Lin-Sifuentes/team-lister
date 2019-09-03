@@ -15,9 +15,13 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<h1>Ad Details</h1>
-<p><c:out value="${ad.title}"/></p>
-<p><c:out value="${username.username}"/></p>
-<a href=""><c:out value="made by ${username.email}"/></a>
+<div class="container">
+    <div class="col-md-6">
+        <h1>Ad Details</h1>
+        <p><c:out value="${ad.title}"/></p>
+        <p><c:out value="${username.username}"/></p>
+        <a href=""><c:out value="made by ${username.email}"/></a>
+    </div>
+</div>
 </body>
 </html>
