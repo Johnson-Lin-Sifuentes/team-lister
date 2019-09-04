@@ -20,7 +20,7 @@
         <h1>Ad Details</h1>
         <p>Title: <c:out value="${ad.title}"/></p>
         <p>Description: <c:out value="${ad.description}"/></p>
-        <a href=""><c:out value="made by ${username.username}"/></a>
+        <p><c:out value="Made by: ${username.username}"/></p>
     </div>
 </div>
 </body>
