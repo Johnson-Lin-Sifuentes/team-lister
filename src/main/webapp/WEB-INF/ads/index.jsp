@@ -12,16 +12,13 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-            <a href="http://localhost:8080/details?id=${ad.id}">click here to view details</a>
-        </div>
-    </c:forEach>
+    <div class="container-fluid" id="adList">
+    </div>
+
+
 </div>
 </body>
-<script src=“https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js“></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
     function searchAds() {
         var input, filter;
@@ -29,14 +26,25 @@
         filter = input.value.toUpperCase();
         var filteredAds = [];
         var html = '';
+
         <c:forEach var="ad" items="${ads}">
+
         td = "${ad.title}";
         if (td.toUpperCase().indexOf(filter) > -1){
             filteredAds.push("${ad.title}");
-            html += "<div class='col-md-6'><h2><a href='http://localhost:8080/individualad?id=${ad.id}'>${ad.title}</a></h2><p>${ad.description}</p></div>";
+            html +=
+        "<div class='col-md-6'>" +
+                "<h2>${ad.title}</h2>" +
+                "<p>${ad.description}</p>" +
+                "<a href='http://localhost:8080/details?id=${ad.id}'>click here to view details</a>" +
+            "</div>";
         }
+
         </c:forEach>
-        $('.adList').html(html);
+
+        console.log(html);
+
+        $('#adList').html(html);
     }
     var searchBar = document.querySelector('#search');
     $('#search').on( "click", searchAds());
