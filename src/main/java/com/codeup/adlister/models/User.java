@@ -23,6 +23,12 @@ public class User {
         this.password = password;
     }
 
+    public User(long id, String username, String email) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+    }
+
     public long getId() {
         return id;
     }
@@ -54,4 +60,5 @@ public class User {
     public void setPassword(String password) {
         this.password = Password.hash(password);
     }
+
 }

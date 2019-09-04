@@ -29,12 +29,7 @@ public class Ad {
         this.categs = categs;
     }
 
-//    public Ad(long id, String title, String description, long categs) {
-//        this.id = id;
-//        this.title = title;
-//        this.description = description;
-//        this.categs = categs;
-//    }
+
 
     public long getId() {
         return id;
@@ -71,6 +66,7 @@ public class Ad {
     public long getCategs(){
         return categs;
     }
+
     public void setCategs(long userId){
         this.categs = categs;
     }
