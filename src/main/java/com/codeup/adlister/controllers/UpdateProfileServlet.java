@@ -33,6 +33,6 @@ public class UpdateProfileServlet extends HttpServlet {
 //                Long.parseLong(request.getParameter("password"))
         );
         DaoFactory.getUsersDao().updateProfile(userUpdate);
-        response.sendRedirect("/profile");
+        response.sendRedirect("/logout");
     }
 }

@@ -18,9 +18,8 @@
 <div class="container">
     <div class="col-md-6">
         <h1>Ad Details</h1>
-        <p><c:out value="${ad.title}"/></p>
-        <p><c:out value="${username.description}"/></p>
-        <p><c:out value="${ad.category}}"</p>
+        <p>Title: <c:out value="${ad.title}"/></p>
+        <p>Description: <c:out value="${ad.description}"/></p>
         <a href=""><c:out value="made by ${username.username}"/></a>
     </div>
 </div>
