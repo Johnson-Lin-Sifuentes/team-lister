@@ -9,6 +9,8 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
+    <input type="text" id="search" onkeyup="searchAds()" placeholder="Search Ads...">
+
     <h1>Here Are all the ads!</h1>
 
     <div class="container-fluid" id="adList">
