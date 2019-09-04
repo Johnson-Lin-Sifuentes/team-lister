@@ -9,6 +9,8 @@
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
         <h1>Please fill in your information.</h1>
+         <jsp:include page="/WEB-INF/partials/registerError.jsp"/>
+
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>

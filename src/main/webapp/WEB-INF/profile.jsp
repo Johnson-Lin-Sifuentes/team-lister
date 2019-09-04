@@ -11,13 +11,9 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
-    </div>
-    <div>
-        <div>
-            <form action="/updateProfile" method="GET">
-                <button type="submit" value="${user.id}" name="updateProfile">Edit Profile</button>
-            </form>
-        </div>
+        <form action="/updateProfile" method="GET">
+            <button type="submit" value="${user.id}" name="updateProfile">Edit Profile</button>
+        </form>
     </div>
 </body>
 </html>
