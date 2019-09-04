@@ -8,6 +8,13 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-        <h1>Welcome to the Adlister!</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                    <h1>Welcome to the Adlister!</h1>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
