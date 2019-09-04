@@ -13,12 +13,11 @@
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
     <div>
-        <h2>Here are your current Ads </h2>
-        <ul>
-            <c:choose>
-                <c:when test="${}"/>
-            </c:choose>
-        </ul>
+        <div>
+            <form action="/updateProfile" method="GET">
+                <button type="submit" value="${user.id}" name="updateProfile">Edit Profile</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

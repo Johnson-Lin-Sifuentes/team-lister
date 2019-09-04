@@ -1,10 +1,11 @@
 package com.codeup.adlister.dao;
 
-import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
+
+import static com.codeup.adlister.dao.Config.getPassword;
 
 public class MySQLUsersDao implements Users {
     private Connection connection;
@@ -15,7 +16,7 @@ public class MySQLUsersDao implements Users {
             connection = DriverManager.getConnection(
                 config.getUrl(),
                 config.getUsername(),
-                config.getPassword()
+                getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
@@ -91,4 +92,17 @@ public class MySQLUsersDao implements Users {
 
     }
 
+    @Override
+    public User updateProfile(User user) {
+        PreparedStatement stmt = null;
+        try{
+            stmt = connection.prepareStatement("UPDATE users SET username = ?, email = ?  WHERE id = ?");
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2, user.getEmail());
+            stmt.setLong(3, user.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating ads");
+        } return null;
+    }
 }
